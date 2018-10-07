@@ -11,7 +11,7 @@ package Sort;
  *        因为小于时小于边界的下一位确定的是==
  *        大于时--交换后不知道大于部分前一位时具体什么数字，所以应该再和num比较后处理
  */
-public class Cod06_heLanguoqi {
+public class Code06_heLanguoqi {
 
     public static int[] partition(int[] arr,int L,int R,int num){
         //将数组分为三部分小于  等于    大于    L到R为等于部分

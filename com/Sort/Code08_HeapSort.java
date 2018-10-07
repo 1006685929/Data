@@ -13,16 +13,17 @@ public class Code08_HeapSort {
         }
         //    建立大根堆
         for (int i=0;i<arr.length;i++){
-            heapInsert(arr,i); //0-i  初始化仅添加
+            heapInsert(arr,i); //0-i  初始化大根堆
         }
         int heapSize = arr.length; //heapSize表示数组中堆的大小   --heapsize表示heapsize前一位
         swap(arr,0,--heapSize); //把大根堆中的根和最后一个交换  heapSize减一
-        while (heapSize>0){
-            heapify(arr,0,heapSize);//调整出大根堆
+        while (heapSize>0){   //直到heepsize==0
+            heapify(arr,0,heapSize);//调整出新大根堆
             swap(arr,0,--heapSize); //头和最后一个再交换
         }
     }
 
+    //调整大根堆
     private static void heapify(int[] arr, int index, int heapSize) {
         int left = index*2+1;  //左孩子
         while (left<heapSize){    //下沉操作
@@ -38,7 +39,7 @@ public class Code08_HeapSort {
             left = index*2+1;         //  left下移
         }
     }
-
+   //建立调整大根堆
     private static void heapInsert(int[] arr, int index) {
         //循环条件   子节点小于父节点  直到父节点是这棵子树最大的
         while (arr[index]>arr[(index-1)/2]){

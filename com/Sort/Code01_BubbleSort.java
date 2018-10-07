@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 0 - N-2     数据操作 N-1
  * 算法复杂度   即等差数列求和   忽略低阶项  an^2+bn+c  ==  0（n^2）
  */
-public class Code_BubbleSort {
+public class Code01_BubbleSort {
 
     public static void bubbSort(int[] arr){
         if (arr == null){
