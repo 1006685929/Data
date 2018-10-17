@@ -20,8 +20,8 @@ public class BubbleSort {
 
     //冒泡排序
     public void bubSort(){
-        for (int i=0;i<(array.length-1);i++){//排序轮数
-            for (int j=0;j<(array.length-1-i);j++){//每轮比较次数
+        for (int i=0;i<array.length-1;i++){//排序轮数
+            for (int j=0;j<array.length-1-i;j++){//每轮比较次数
                 if (array[j]>array[j+1]){
                     int temp = array[j+1];
                     array[j+1] = array[j];
