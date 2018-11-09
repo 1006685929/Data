@@ -27,9 +27,9 @@ public class Solution_22 {
             return arrayList;
         }
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
+        queue.offer(root);//将指定的元素插入到此队列中
         while (!queue.isEmpty()) {
-            TreeNode treeNode = queue.poll();//构建树结点
+            TreeNode treeNode = queue.poll();//构建树结点，检索删除此队列的头并返回
             if (treeNode.left != null) {
                 queue.offer(treeNode.left);
             }

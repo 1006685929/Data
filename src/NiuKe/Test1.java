@@ -5,7 +5,6 @@ public class Test1 {
         Thread t=new Thread(){
             public void  run(){
                 dianping();
-
             }
         };
         t.run();

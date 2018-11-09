@@ -19,20 +19,19 @@ public class Code07_quickSort {
 
     private static int[] patrition(int[] arr, int L, int R) {
 
-        int Less = L-1;
+        int Less = L - 1;
         int more = R;
-        while (L<R){
-            if (arr[L]<arr[R]){  //比较   小于·部分·扩大
-                swap(arr,++Less,L++);
-            }else if (arr[L]>arr[R]){
-                swap(arr,--more,L);
-            }else {
+        while (L < R) {
+            if (arr[L] < arr[R]) {  //比较   小于·部分·扩大
+                swap(arr, ++Less, L++);
+            } else if (arr[L] > arr[R]) {
+                swap(arr, --more, L);
+            } else {
                 L++;
             }
         }
-        swap(arr,more,R);//将后边存放x区域的x和大于x部分的区域交换，即=x的部分++
-        return new int[] {Less+1,more};//两个长度的数组
-
+        swap(arr, more, R);//将后边存放x区域的x和大于x部分的区域交换，即=x的部分++
+        return new int[]{Less + 1, more};//两个长度的数组
     }
 
     private static void swap(int[] arr, int i, int j) {
