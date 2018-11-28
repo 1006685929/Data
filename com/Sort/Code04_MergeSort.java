@@ -10,7 +10,7 @@ public class Code04_MergeSort {
         if (L==R){
             return;
         }
-        int mid = (L+R)/2;//中点
+        int mid =L+((R-L)>>1);//中点
         Sort(arr,L,mid);//  T(N/2)
         Sort(arr,mid+1,R);//  T(N/2)
         mergeSort(arr,L,mid,R);//  O(N)

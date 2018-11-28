@@ -7,18 +7,19 @@ package Sort;
 public class Code07_quickSort {
 
     public static void quickSort(int[] arr,int L,int R){
-
+        if (arr == null){
+            return;
+        }
         if (L<R){
             //随机快排添加代码，即在L到R位置上随机一个值和R交换，作为指定值
             swap(arr,L+(int)(Math.random()*(R-L+1)),R);
-            int[] p = patrition(arr,L,R);//记录边界，后续递归区域选择，左边完了处理右边
+            int[] p = partition(arr,L,R);//记录边界，后续递归区域选择，左边完了处理右边
             quickSort(arr,L,p[0]-1);
             quickSort(arr,p[1+1],R);
         }
     }
 
-    private static int[] patrition(int[] arr, int L, int R) {
-
+    private static int[] partition(int[] arr, int L, int R) {
         int Less = L - 1;
         int more = R;
         while (L < R) {

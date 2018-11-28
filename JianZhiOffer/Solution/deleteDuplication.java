@@ -15,11 +15,4 @@ public class deleteDuplication {
             this.val = val;
         }
     }
-
-    public ListNode deleteDuplication(ListNode pHead) {
-        if (pHead == null){
-            return null;
-        }
-        pHead.val = pHead.next.val;
-        pHead.next = pHead.next.next;
 }
