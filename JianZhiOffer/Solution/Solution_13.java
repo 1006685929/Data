@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class Solution_13 {
 
+    //
     public void reOrderArray(int [] array) {
         ArrayList<Integer> list1 = new ArrayList();
         ArrayList<Integer> list2 = new ArrayList();
